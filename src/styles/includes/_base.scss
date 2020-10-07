@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  // font-family: $font-base;
+  // color: $color-base;
+}
+
+// Example of the typography mixin for setting the first heading and a heading class
+h1,
+.h1 {
+
+}

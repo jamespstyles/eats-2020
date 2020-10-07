@@ -1,0 +1,40 @@
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding: 10px;
+  border: none;
+  background-color: $color-light-blue;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-blue;
+  }// &:hover, &:focus
+
+  .svg-icon {
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }// .svg-icon
+
+  .svg-icon--close {
+    opacity: 0;
+  }// .svg-icon--close
+
+  &.is-active {
+    background-color: $color-blue;
+
+    .svg-icon {
+      opacity: 0;
+    }// .svg-icon
+
+    .svg-icon--close {
+      opacity: 1;
+    }// .svg-icon--close
+
+  }// &.is-active
+
+}// .toggle

@@ -1,0 +1,4 @@
+/*! gruntyplate - v0.2.0 - 2020-10-07
+* Copyright (c) 2020 ;*/
+
+var app={};app.menuToggle=function(s){"use strict";s(".js-toggle-menu").on("click",function(){s("body").hasClass("menu-open")?(s(this).removeClass("is-active"),s("body").removeClass("menu-open")):(s("body").hasClass("search-open")&&(s("body").removeClass("search-open"),s(".js-toggle-search").removeClass("is-active")),s(this).addClass("is-active"),s("body").addClass("menu-open"))})}(jQuery),app.searchToggle=function(s){"use strict";s(".js-toggle-search").on("click",function(){s("body").hasClass("search-open")?(s(this).removeClass("is-active"),s("body").removeClass("search-open")):(s("body").hasClass("menu-open")&&(s("body").removeClass("menu-open"),s(".js-toggle-menu").removeClass("is-active")),s(this).addClass("is-active"),s("body").addClass("search-open"),s("#search-input").focus())})}(jQuery);
