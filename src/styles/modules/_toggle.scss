@@ -18,6 +18,7 @@
     position: absolute;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
   }// .svg-icon
 
   .svg-icon--close {

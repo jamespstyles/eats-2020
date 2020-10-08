@@ -26,6 +26,9 @@ function eats_theme_support() {
 	// Set post thumbnail size.
 	set_post_thumbnail_size( 740, 417 );
 
+	// Set title tag
+	add_theme_support( 'title-tag' );
+
 	/**
 	 * Register navigation.
 	 *

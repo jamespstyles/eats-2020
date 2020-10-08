@@ -1,31 +1,39 @@
-app.menuToggle = (($) => {
+app.menuToggle = (() => {
   'use strict';
 
   const init = () => {
-    $('.js-toggle-menu').on('click', function() {
 
-      // Check current state of menu
-      if (!$('body').hasClass('menu-open')) {
+    document.addEventListener('click', function (event) {
 
-        // If the menu is closed - check if search is open and close it
-        if ($('body').hasClass('search-open')) {
-          $('body').removeClass('search-open');
-          $('.js-toggle-search').removeClass('is-active');
+      // If users not clicking menu toggle return
+      if (!event.target.matches('.js-toggle-menu')) return;
+
+      var body = document.body,
+          toggle = event.target;
+
+      // Check if menu is currently closed
+      if(!body.classList.contains('menu-open')){
+
+        // Before opening menu, check for open search and close if necessary
+        if(body.classList.contains('search-open')){
+          body.classList.remove('search-open');
+          document.querySelector('.js-toggle-search').classList.remove('is-active');
         }
 
         // Open menu
-        $(this).addClass('is-active');
-        $('body').addClass('menu-open');
+        body.classList.add('menu-open');
+        toggle.classList.add('is-active');
+
       } else {
-        // Close menu
-        $(this).removeClass('is-active');
-        $('body').removeClass('menu-open');
+
+        body.classList.remove( 'menu-open' );
+        toggle.classList.remove('is-active');
       }
 
-    });
+    }, false);
 
-  };
+  }
 
   init();
 
-})(jQuery);
+})();

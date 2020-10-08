@@ -6,23 +6,27 @@
 get_header();
 ?>
 
-<div class="l-container">
+<main id="main-content" role="main">
 
-	<?php
+	<div class="l-container">
 
-	if ( have_posts() ) :
-		while ( have_posts() ) : the_post();
+		<?php
 
-			the_title( '<h2>', '</h2>' );
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
 
-		endwhile;
-	else :
-		_e( 'Sorry, no posts matched your criteria.', 'eats' );
-	endif;
+				the_title( '<h2>', '</h2>' );
 
-	?>
+			endwhile;
+		else :
+			_e( 'Sorry, no posts matched your criteria.', 'eats' );
+		endif;
 
-</div>
+		?>
+
+	</div>
+
+</main><!-- #main-content -->
 
 <?php
 

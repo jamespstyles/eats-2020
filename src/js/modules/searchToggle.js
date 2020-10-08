@@ -2,6 +2,7 @@ app.searchToggle = (($) => {
   'use strict';
 
   const init = () => {
+
     $('.js-toggle-search').on('click', function() {
 
       // Check current state of search
